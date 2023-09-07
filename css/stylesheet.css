@@ -1,0 +1,120 @@
+html {
+    font-size: 62.5%;
+}
+
+*, 
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+img, picture, svg, video{ /* used to make all these elements responsive*/
+    max-width: 100%;
+    object-fit: none;
+}
+
+button{
+    outline-color: transparent; /*Hides the defualt outline on buttons even when changed to High contrast style browser */
+}
+ 
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: hsl(234, 12%, 34%)
+}
+
+p{
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+
+
+    color: hsla(234, 12%, 34%, 0.7);
+}
+
+.title{
+    max-width: 500px;
+    margin: auto;
+}
+.title_Heading{
+    font-size: 2.5rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.description{
+padding: 0 5rem;
+text-align: center;
+
+}
+
+.card{
+    max-width: 300px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px  hsl(229, 6%, 66%);
+    margin: 2rem auto;
+    position: relative;
+    min-height: 250px;
+}
+
+.grid{
+    margin: 5rem auto;
+}
+
+@media screen and (min-width:1024px) {
+    .grid--1x3{
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+    }
+    .description{
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .grid{
+        display: grid;
+        grid-gap: 3rem;
+    }
+    
+}
+
+.item1{
+    grid-row-start: 1;
+    grid-row-end:3 ;
+    align-self: center;
+    border-top: solid hsl(179, 61%, 53%) 4px;
+    object-fit: none;
+}
+.item2{
+    grid-row-start: 2;
+    grid-row-end:1 ;
+    border-top: solid hsl(1, 65%, 60%) 4px;
+
+}
+
+.item3{
+    border-top: solid hsl(33, 91%, 63%) 4px ;
+}
+.item4{
+    grid-row-start: 4;
+    grid-row-end: 1;
+    align-self: center;
+    border-top: solid hsl(212, 81%, 62%) 4px;
+  
+}
+
+/* .item1{
+    background:url('/images/icon-supervisor.svg');
+    width:100%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}  only effected by the size of the containing box not the content inside*/
+
+ .card_Icon{
+    margin-left: Auto;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+ }
+
